@@ -123,3 +123,14 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# toggle audio outputs
+super + alt + s
+	  exec /home/josh/scripts/audio_out_module/toggle_sound.sh
+
+XF86AudioLowerVolume
+	#pactl set-sink-volume $sink +5% && 
+	notify-send "test"	
+XF86AudioRaiseVolume
+	#pactl set-sink-volume $sink +5% &&
+	notify-send "test"

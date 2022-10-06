@@ -1,6 +1,8 @@
 #! /bin/sh
 
-pgrep -x x11vnc > /dev/null || x11vnc -passwd MyVNCp4ssw0rd123 -forever &
+export sink="cat /home/josh/scripts/audio_out_module/audio"
+
+#pgrep -x x11vnc > /dev/null || x11vnc -passwd notmyactualpass -forever &
 
 pgrep -x flameshot > /dev/null || flameshot &
 
