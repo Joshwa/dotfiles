@@ -1,6 +1,8 @@
 #! /bin/sh
 
-export sink="cat /home/josh/scripts/audio_out_module/audio"
+$HOME/josh/scripts/package_module/dbus.sh &
+
+#export sink="$(cat /home/josh/scripts/audio_out_module/sink)"
 
 #pgrep -x x11vnc > /dev/null || x11vnc -passwd notmyactualpass -forever &
 

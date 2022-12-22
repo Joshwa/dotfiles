@@ -24,16 +24,16 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = (0,600)
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = (0,300)
 
     # Position the notification in the top right corner
     origin = top-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = 30x50
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -83,15 +83,14 @@
     horizontal_padding = 8
 
     # Padding between text and icon.
-    text_icon_padding = 0
+    text_icon_padding = 15 
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#b8bb26"
-
+    frame_color = "#fabd2f"
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
     # of size frame_width will be drawn around each notification instead.
@@ -118,7 +117,7 @@
 
     ### Text ###
 
-    font = "mononoki 8"
+    font = "Friz Quadrata Std 13"
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -209,7 +208,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 32 
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -308,26 +307,26 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
-    timeout = 10
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 2s 
     # Icon for notifications with low urgency, uncomment to enable
-    #default_icon = /path/to/icon
+    default_icon = /home/josh/.config/dunst/icon.png
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
-    timeout = 10
+    background = "#282828"
+    foreground = "#ebdbb2"
+    timeout = 2s
     # Icon for notifications with normal urgency, uncomment to enable
-    #default_icon = /path/to/icon
+    default_icon = /home/josh/.config/dunst/icon.png
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
+    background = "#282828"
+    foreground = "#ebdbb2"
     frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    #default_icon = /path/to/icon
+    default_icon = /home/josh/.config/dunst/icon.png
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
@@ -403,6 +402,13 @@
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
+
+
+ [discord]
+     appname = Discord
+     background = "#1E2124"
+     format = "<b>%s</b>\n%b"
+     timeout = 30
 
 #[espeak]
 #    summary = "*"
