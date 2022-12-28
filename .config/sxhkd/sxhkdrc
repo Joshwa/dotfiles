@@ -135,3 +135,9 @@ super + shift + KP_Add
 
 super + shift + r
 	pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'reloading config'
+
+super + Print
+	flameshot screen
+
+super + shift + Print
+	flameshot gui

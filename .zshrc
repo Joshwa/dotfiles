@@ -1,6 +1,8 @@
 # Created by newuser for 5.8
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export HISTFILE=/home/josh/.zsh-history
+export HISTSIZE=1000000
 
 # enable autocomplete
 autoload -Uz compinit

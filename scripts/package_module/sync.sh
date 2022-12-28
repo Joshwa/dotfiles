@@ -1,13 +1,13 @@
 #!/bin/bash
 
+#sync
+emerge --sync
+
 su josh -c /home/josh/scripts/package_module/dbus.sh
 
 if [ -r "/home/josh/scripts/package_module/Xdbus" ]; then
 	. "/home/josh/scripts/package_module/Xdbus"
 fi
-
-#sync
-emerge --sync
 
 su josh -c 'notify-send "package_module" "sync completed"'
 
